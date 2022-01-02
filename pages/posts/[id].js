@@ -51,7 +51,7 @@ export async function getStaticPaths() {
 
 // nextjsのStatic Generation用に定義されている関数
 export async function getStaticProps({ params }) {
-  const { post: post } = await getPostData(params.id);
+  const post = await getPostData(params.id);
   return {
     props: {
       post,
